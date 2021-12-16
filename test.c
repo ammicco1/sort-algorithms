@@ -21,12 +21,12 @@ int main(){
             a[i] = rand();
         }
 
-        printf("---------------------------------------------");
-        printf("WHICH ALGORITHM DO YOU WANT TO USE?");
-        printf("\t- 1: INSERTIONSORT");
-        printf("\t- 2: MERGESORT");
-        printf("\t- 3: HEAPSORT");
-        printf("\t- 4: QUICKSORT");
+        printf("---------------------------------------------\n");
+        printf("WHICH ALGORITHM DO YOU WANT TO USE?\n");
+        printf("\t- 1: INSERTIONSORT\n");
+        printf("\t- 2: MERGESORT\n");
+        printf("\t- 3: HEAPSORT\n");
+        printf("\t- 4: QUICKSORT\n");
         printf("---------------------------------------------\n");
         printf("CHOISE: "); scanf("%d", &choise);
 
