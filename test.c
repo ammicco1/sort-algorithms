@@ -19,7 +19,10 @@ int main(){
 
         for(i = 0; i < LEN; i++){
             a[i] = rand();
+            printf("%d  ", a[i]);
         }
+
+        printf("\n");
 
         printf("---------------------------------------------\n");
         printf("WHICH ALGORITHM DO YOU WANT TO USE?\n");
