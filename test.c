@@ -19,7 +19,6 @@ int main(){
 
         for(i = 0; i < LEN; i++){
             a[i] = rand() % 100;
-            printf("%d  ", a[i]);
         }
 
         printf("---------------------------------------------\n");
@@ -34,16 +33,16 @@ int main(){
         switch (choise){
             case 1: printf("YOUR CHOISE IS: INSERTIONSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
             printf("-- INSERTIONSORT --\n"); insertionsort(a, LEN); 
-            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); printf("\n"); break;
+            printf("SORTED ARRAY: "); print_array(a, LEN); printf("\n"); break;
             case 2: printf("YOUR CHOISE IS: MERGESORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
             printf("-- MERGESORT --\n"); mergesort(a, 0, LEN - 1); 
-            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); printf("\n"); break;
+            printf("SORTED ARRAY: "); print_array(a, LEN); printf("\n"); break;
             case 3: printf("YOUR CHOISE IS: HEAPSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
             printf("-- HEAPSORT --\n"); heapsort(a, LEN); 
-            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); printf("\n"); break;
+            printf("SORTED ARRAY: "); print_array(a, LEN); printf("\n"); break;
             case 4: printf("YOUR CHOISE IS: QUICKSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
             printf("-- QUICKSORT --\n"); quicksort(a, 0, LEN - 1); 
-            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); printf("\n"); break;
+            printf("SORTED ARRAY: "); print_array(a, LEN); printf("\n"); break;
             default: printf("!! NOT VALID CHOISE !!"); break;
         }
     }
