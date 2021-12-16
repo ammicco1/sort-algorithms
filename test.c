@@ -18,7 +18,7 @@ int main(){
     while(1){
 
         for(i = 0; i < LEN; i++){
-            a[i] = rand() % 100000;
+            a[i] = rand() % 100;
             printf("%d  ", a[i]);
         }
 
@@ -34,16 +34,16 @@ int main(){
         switch (choise){
             case 1: printf("YOUR CHOISE IS: INSERTIONSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
             printf("-- INSERTIONSORT --\n"); insertionsort(a, LEN); 
-            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); break;
+            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); printf("\n"); break;
             case 2: printf("YOUR CHOISE IS: MERGESORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
             printf("-- MERGESORT --\n"); mergesort(a, 0, LEN - 1); 
-            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); break;
+            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); printf("\n"); break;
             case 3: printf("YOUR CHOISE IS: HEAPSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
             printf("-- HEAPSORT --\n"); heapsort(a, LEN); 
-            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); break;
+            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); printf("\n"); break;
             case 4: printf("YOUR CHOISE IS: QUICKSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
             printf("-- QUICKSORT --\n"); quicksort(a, 0, LEN - 1); 
-            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); break;
+            printf("-- SORTED ARRAY --\n"); print_array(a, LEN); printf("\n"); break;
             default: printf("!! NOT VALID CHOISE !!"); break;
         }
     }
@@ -59,14 +59,8 @@ void print_array(int A[], int len){
         if(i == 0){printf("|");}
         if(A[i] < 10){
             printf("  %d  |",A[i]);
-        }else if(A[i] > 9 && A[i] < 100){
+        }else if(A[i] > 9 && A[i] <= 100){
             printf(" %d |",A[i]);
-        }else if(A[i] > 99 && A[i] < 1000){
-            printf(" %d |",A[i]);
-        }else if(A[i] > 999 && A[i] < 10000){
-            printf(" %d|",A[i]);
-        }else if(A[i] > 9999 && A[i] < 100000){
-            printf("%d|",A[i]);
         }
     }
 
