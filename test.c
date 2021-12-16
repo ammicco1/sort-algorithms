@@ -6,18 +6,19 @@
 #include "insertionsort.h"
 #include "quicksort.h"
 
-#define LEN 23
+#define __LEN__ 23
+#define __MAX_NUM__ 100
 
 void print_array(int A[], int len);
 
 int main(){
     int i, choise; 
-    int a[LEN];
+    int a[__LEN__];
     srand(time(NULL)); 
 
     while(1){
 
-        for(i = 0; i < LEN; i++){
+        for(i = 0; i < __LEN__; i++){
             a[i] = rand() % 100;
         }
 
@@ -28,21 +29,21 @@ int main(){
         printf("\t- 3: HEAPSORT\n");
         printf("\t- 4: QUICKSORT\n");
         printf("---------------------------------------------\n");
-        printf("CHOISE: "); scanf("%d", &choise);
+        printf("\nCHOISE: "); scanf("%d", &choise);
 
         switch (choise){
-            case 1: printf("YOUR CHOISE IS: INSERTIONSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
-            printf("\n-- INSERTIONSORT --\n"); insertionsort(a, LEN); 
-            printf("SORTED ARRAY: \t\t"); print_array(a, LEN); printf("\n"); break;
-            case 2: printf("YOUR CHOISE IS: MERGESORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
-            printf("\n-- MERGESORT --\n"); mergesort(a, 0, LEN - 1); 
-            printf("SORTED ARRAY: \t\t"); print_array(a, LEN); printf("\n"); break;
-            case 3: printf("YOUR CHOISE IS: HEAPSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
-            printf("\n-- HEAPSORT --\n"); heapsort(a, LEN); 
-            printf("SORTED ARRAY: \t\t"); print_array(a, LEN); printf("\n"); break;
-            case 4: printf("YOUR CHOISE IS: QUICKSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
-            printf("\n-- QUICKSORT --\n"); quicksort(a, 0, LEN - 1); 
-            printf("SORTED ARRAY: \t\t"); print_array(a, LEN); printf("\n"); break;
+            case 1: printf("YOUR CHOISE IS: INSERTIONSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, __LEN__); 
+            printf("\n-- INSERTIONSORT --\n"); insertionsort(a, __LEN__); 
+            printf("SORTED ARRAY: \t\t"); print_array(a, __LEN__); printf("\n"); break;
+            case 2: printf("YOUR CHOISE IS: MERGESORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, __LEN__); 
+            printf("\n-- MERGESORT --\n"); mergesort(a, 0, __LEN__ - 1); 
+            printf("SORTED ARRAY: \t\t"); print_array(a, __LEN__); printf("\n"); break;
+            case 3: printf("YOUR CHOISE IS: HEAPSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, __LEN__); 
+            printf("\n-- HEAPSORT --\n"); heapsort(a, __LEN__); 
+            printf("SORTED ARRAY: \t\t"); print_array(a, __LEN__); printf("\n"); break;
+            case 4: printf("YOUR CHOISE IS: QUICKSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, __LEN__); 
+            printf("\n-- QUICKSORT --\n"); quicksort(a, 0, __LEN__ - 1); 
+            printf("SORTED ARRAY: \t\t"); print_array(a, __LEN__); printf("\n"); break;
             default: printf("!! NOT VALID CHOISE !!\n"); break;
         }
     }
