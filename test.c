@@ -59,7 +59,7 @@ void print_array(int A[], int len){
         if(A[i] < 10){
             printf("  %d  |",A[i]);
         }else if(A[i] > 9 && A[i] <= 100){
-            printf(" %d |",A[i]);
+            printf("  %d |",A[i]);
         }
     }
 
