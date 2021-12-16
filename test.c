@@ -1,38 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "heapsort.h"
 #include "mergesort.h"
 #include "insertionsort.h"
 #include "quicksort.h"
 
+#define LEN 23
+
 void print_array(int A[], int len);
 
 int main(){
-    int i; 
-    int array[] = {3, 5, 2, 45, 31, 1, 356, 8, 1, 22, 231, 341, 4, 56, 7, 3, 2}, 
-        array2[] = {3, 5, 2, 45, 31, 1, 356, 8, 1, 22, 231, 341, 4, 56, 7, 3, 2}, 
-        array3[] = {3, 5, 2, 45, 31, 1, 356, 8, 1, 22, 231, 341, 4, 56, 7, 3, 2},
-        array4[] = {3, 5, 2, 45, 31, 1, 356, 8, 1, 22, 231, 341, 4, 56, 7, 3, 2};
+    int i, choise; 
+    int a[LEN];
+    srand(time(NULL)); 
 
-    /*printf("con heapsort:\n\n");
-    print_array(array, sizeof(array) / sizeof(int)); printf("\n");
-    heapsort(array, sizeof(array) / sizeof(int));
-    print_array(array, sizeof(array) / sizeof(int));
+    while(1){
 
-    printf("\n\ncon mergesort:\n\n");
-    print_array(array2, sizeof(array2) / sizeof(int)); printf("\n");
-    mergesort(array2, 0, (sizeof(array2) / sizeof(int)) - 1);
-    print_array(array2, sizeof(array2) / sizeof(int)); 
+        for(i = 0; i < LEN; i++){
+            a[i] = rand();
+        }
 
-    printf("\n\ncon insertionsort:\n\n");
-    print_array(array3, sizeof(array3) / sizeof(int)); printf("\n");
-    insertionsort(array3, sizeof(array3) / sizeof(int));
-    print_array(array3, sizeof(array3) / sizeof(int));
+        printf("---------------------------------------------");
+        printf("WHICH ALGORITHM DO YOU WANT TO USE?");
+        printf("\t- 1: INSERTIONSORT");
+        printf("\t- 2: MERGESORT");
+        printf("\t- 3: HEAPSORT");
+        printf("\t- 4: QUICKSORT");
+        printf("---------------------------------------------\n");
+        printf("CHOISE: "); scanf("%d", &choise);
 
-    printf("\n\ncon quicksort:\n\n");
-    print_array(array4, sizeof(array4) / sizeof(int)); printf("\n");
-    quicksort(array4, 0, (sizeof(array4) / sizeof(int)) - 1);
-    print_array(array4, sizeof(array4) / sizeof(int)); printf("\n");*/
+        switch (choise){
+            case 1: printf("YOUR CHOISE IS: INSERTIONSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
+            printf("-- INSERTIONSORT --"); insertionsort(a, LEN); 
+            printf("-- SORTED ARRAY --"); print_array(a, LEN); break;
+            case 2: printf("YOUR CHOISE IS: MERGESORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
+            printf("-- MERGESORT --"); mergesort(a, 0, LEN - 1); 
+            printf("-- SORTED ARRAY --"); print_array(a, LEN); break;
+            case 3: printf("YOUR CHOISE IS: HEAPSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
+            printf("-- HEAPSORT --"); heapsort(a, LEN); 
+            printf("-- SORTED ARRAY --"); print_array(a, LEN); break;
+            case 4: printf("YOUR CHOISE IS: QUICKSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, LEN); 
+            printf("-- QUICKSORT --"); quicksort(a, 0, LEN - 1); 
+            printf("-- SORTED ARRAY --"); print_array(a, LEN); break;
+            default: printf("!! NOT VALID CHOISE !!"); break;
+        }
+    }
 
     return 0;
 
@@ -42,6 +55,18 @@ void print_array(int A[], int len){
     int i; 
 
     for(i = 0; i < len; i++){
-        printf("%d  ",A[i]);
+        if(A[i] < 10){
+            printf("|  %d  |",A[i]);
+        }else if(A[i] > 9 && A[i] < 100){
+            printf("|  %d |",A[i]);
+        }else if(A[i] > 99 && A[i] < 1000){
+            printf("| %d |",A[i]);
+        }else if(A[i] > 999 && A[i] < 10000){
+            printf("| %d|",A[i]);
+        }else if(A[i] > 9999 && A[i] < 100000){
+            printf("|%d|",A[i]);
+        }
     }
+
+    printf("\n");
 }
