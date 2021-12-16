@@ -18,11 +18,9 @@ int main(){
     while(1){
 
         for(i = 0; i < LEN; i++){
-            a[i] = rand();
+            a[i] = rand() % 100000;
             printf("%d  ", a[i]);
         }
-
-        printf("\n");
 
         printf("---------------------------------------------\n");
         printf("WHICH ALGORITHM DO YOU WANT TO USE?\n");
