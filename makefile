@@ -1,5 +1,5 @@
 FLAGS = -Wall -ansi -pedantic
-OBJS = heapsort.o mergesort.o insertionsort.o quicksort.o
+OBJS = heapsort.o mergesort.o insertionsort.o quicksort.o tes.o
 EXEC = test
 
 $(EXEC): $(OBJS)
