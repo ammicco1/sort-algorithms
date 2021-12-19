@@ -9,14 +9,14 @@ int partition(int A[], int first_ind, int last_ind){
     for(j = first_ind; j < last_ind; j++){
         if(A[j] <= x){
             i++;
-            tmp = A[i];
-            A[i] = A[j];
-            A[j] = tmp;
+            tmp     = A[i];
+            A[i]    = A[j];
+            A[j]    = tmp;
         }
     }
 
-    tmp = A[i + 1];
-    A[i + 1] = A[last_ind];
+    tmp         = A[i + 1];
+    A[i + 1]    = A[last_ind];
     A[last_ind] = tmp;
 
     return i + 1;

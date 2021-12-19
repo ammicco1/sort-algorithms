@@ -7,6 +7,7 @@
 #include "insertionsort.h"
 #include "quicksort.h"
 
+/* const to define the max length of array and the max number */
 #define __LEN__ 1000
 #define __MAX_NUM__ 1000
 
@@ -21,6 +22,7 @@ int main(){
 
     while(1){
 
+        /* create the random array */
         for(i = 0; i < __LEN__; i++){
             a[i] = rand() % __MAX_NUM__;
         }
@@ -38,15 +40,19 @@ int main(){
             case 1: printf("YOUR CHOISE IS: INSERTIONSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, __LEN__); 
             printf("\n-- INSERTIONSORT --\n"); start = clock(); insertionsort(a, __LEN__); end = clock();
             printf("SORTED ARRAY: \t\t"); print_array(a, __LEN__); tot_time = (double)(end - start) / CLOCKS_PER_SEC; printf("\ntime of execution: %f\n", tot_time); break;
+
             case 2: printf("YOUR CHOISE IS: MERGESORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, __LEN__); 
             printf("\n-- MERGESORT --\n"); start = clock(); mergesort(a, 0, __LEN__ - 1); end = clock();
             printf("SORTED ARRAY: \t\t"); print_array(a, __LEN__); tot_time = (double)(end - start) / CLOCKS_PER_SEC; printf("\ntime of execution: %f\n", tot_time); break;
+            
             case 3: printf("YOUR CHOISE IS: HEAPSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, __LEN__); 
             printf("\n-- HEAPSORT --\n"); start = clock(); heapsort(a, __LEN__); end = clock();
             printf("SORTED ARRAY: \t\t"); print_array(a, __LEN__); tot_time = (double)(end - start) / CLOCKS_PER_SEC; printf("\ntime of execution: %f\n", tot_time); break;
+            
             case 4: printf("YOUR CHOISE IS: QUICKSORT.\nTHE NUMBER TO SORT ARE: "); print_array(a, __LEN__); 
             printf("\n-- QUICKSORT --\n"); start = clock(); quicksort(a, 0, __LEN__ - 1); end = clock();
             printf("SORTED ARRAY: \t\t"); print_array(a, __LEN__); tot_time = (double)(end - start) / CLOCKS_PER_SEC; printf("\ntime of execution: %f\n", tot_time); break;
+            
             default: printf("!! NOT VALID CHOISE !!\n"); break;
         }
     }
