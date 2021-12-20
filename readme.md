@@ -41,6 +41,6 @@ IF YOU USE LINUX USE THE MAKEFILE, IF YOU USE WINDOWS:
     - gcc -Wall -ansi -pedantic -c heapsort.c insertionsort.c mergesort.c quicksort.c test.c
     - gcc -Wall -ansi -pedantic -o test.exe heapsort.o insertionsort.o mergesort.o quicksort.o test.o
 
-- AND THIS TO CLEAN:
+- AND THEESE TO CLEAN:
     - del *.o 
     - del *.exe
