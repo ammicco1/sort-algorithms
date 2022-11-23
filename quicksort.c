@@ -1,6 +1,6 @@
 #include "quicksort.h"
 
-int partition(int A[], int first_ind, int last_ind){
+int partition(int *A, int first_ind, int last_ind){
     int x, i, j, tmp;
 
     x = A[last_ind];
@@ -22,7 +22,7 @@ int partition(int A[], int first_ind, int last_ind){
     return i + 1;
 }
 
-void quicksort(int A[], int first_ind, int last_ind){
+void quicksort(int *A, int first_ind, int last_ind){
     int q;
 
     if(first_ind < last_ind){

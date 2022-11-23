@@ -1,3 +1,3 @@
-int partition(int A[], int first_ind, int last_ind);
+int partition(int *, int, int);
 
-void quicksort(int A[], int first_ind, int last_ind);
+void quicksort(int *, int, int);

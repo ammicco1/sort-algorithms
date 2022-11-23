@@ -1,1 +1,1 @@
-void insertionsort(int A[], int len);
+void insertionsort(int *, int);

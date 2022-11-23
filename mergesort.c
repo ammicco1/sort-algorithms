@@ -1,6 +1,6 @@
 #include "mergesort.h"
 
-void merge(int A[], int first_ind, int med_ind, int last_ind){
+void merge(int *A, int first_ind, int med_ind, int last_ind){
     int i, j, k;
     int n1 = med_ind - first_ind + 1;
     int n2 = last_ind - med_ind; 
@@ -29,7 +29,7 @@ void merge(int A[], int first_ind, int med_ind, int last_ind){
     }
 }
 
-void mergesort(int A[], int first_ind, int last_ind){
+void mergesort(int *A, int first_ind, int last_ind){
     int med_ind;
 
     if(first_ind < last_ind) {

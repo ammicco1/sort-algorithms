@@ -11,7 +11,24 @@
 #define __LEN__ 1000
 #define __MAX_NUM__ 1000
 
-void print_array(int A[], int len);
+static void print_array(int *A, int len){
+    int i; 
+
+    for(i = 0; i < len; i++){
+        if(i == 0){printf("|");}
+        if(A[i] < 10){
+            printf("  %d  |",A[i]);
+        }else if(A[i] > 9 && A[i] < 100){
+            printf("  %d |",A[i]);
+        }else if(A[i] > 99 && A[i] < 1000){
+            printf(" %d |", A[i]);
+        }else if(A[i] > 999 && A[i] < 10000){
+            printf(" %d|", A[i]);
+        }
+    }
+
+    printf("\n");
+}
 
 int main(){
     int i, choise; 
@@ -21,7 +38,6 @@ int main(){
     srand(time(NULL)); 
 
     while(1){
-
         /* create the random array */
         for(i = 0; i < __LEN__; i++){
             a[i] = rand() % __MAX_NUM__;
@@ -59,23 +75,4 @@ int main(){
 
     return 0;
 
-}
-
-void print_array(int A[], int len){
-    int i; 
-
-    for(i = 0; i < len; i++){
-        if(i == 0){printf("|");}
-        if(A[i] < 10){
-            printf("  %d  |",A[i]);
-        }else if(A[i] > 9 && A[i] < 100){
-            printf("  %d |",A[i]);
-        }else if(A[i] > 99 && A[i] < 1000){
-            printf(" %d |", A[i]);
-        }else if(A[i] > 999 && A[i] < 10000){
-            printf(" %d|", A[i]);
-        }
-    }
-
-    printf("\n");
 }

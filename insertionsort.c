@@ -1,6 +1,6 @@
 #include "insertionsort.h"
 
-void insertionsort(int A[], int len){
+void insertionsort(int *A, int len){
     int i, j, x;
 
     for(i = 1; i < len; i++){

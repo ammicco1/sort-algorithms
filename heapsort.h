@@ -1,5 +1,5 @@
-void maxheapify(int a[], int len, int ind);
+void maxheapify(int *, int, int);
 
-void build_maxheap(int a[], int len);
+void build_maxheap(int *, int);
 
-void heapsort(int a[], int len);
+void heapsort(int *, int);

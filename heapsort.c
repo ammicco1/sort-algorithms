@@ -1,6 +1,6 @@
 #include "heapsort.h"
 
-void maxheapify(int a[], int len, int ind){
+void maxheapify(int *a, int len, int ind){
     int l = 2 * ind;
     int r = l + 1; 
     int m, k; 
@@ -17,16 +17,17 @@ void maxheapify(int a[], int len, int ind){
 	    a[m]    = k;
         maxheapify(a, len, m);
     }
-
 }
-void build_maxheap(int a[], int len){
+
+void build_maxheap(int *a, int len){
     int l; 
 
     for(l = (len / 2) -1; l >= 0; l--){
         maxheapify(a, len, l);
     }
 }
-void heapsort(int a[], int len){
+
+void heapsort(int *a, int len){
     int i, k; 
 
     build_maxheap(a, len);
